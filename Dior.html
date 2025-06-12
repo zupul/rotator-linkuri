@@ -113,20 +113,14 @@
     index = index ? parseInt(index) : 0;
 
     // Redirecționează
-  //  window.location.href = links[index];
-
-    
+    window.location.href = links[index];
 
     // Incrementăm indexul
     index = (index + 1) % links.length;
     localStorage.setItem("rotatorIndex", index);
   </script>
-
-  <meta http-equiv="refresh" content="0; url=links[index]">
 </head>
 <body>
   <p>Redirecționare în curs...</p>
-
-  
 </body>
 </html>
