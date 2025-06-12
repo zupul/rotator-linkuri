@@ -116,25 +116,17 @@
   //  window.location.href = links[index];
 
     
-/////////////////////////////////////////
-    var a = document.createElement('a')
-var link = document.createTextNode("This is link")
-a.appendChild(link)
-a.title = "This is Link"
-a.href =  links[index]
-a.id="mylink"
-document.body.appendChild(a)
-document.getElementById('mylink').click()
-document.body.removeChild(a)
-////////////////////////////////////
-    
 
     // Incrementăm indexul
     index = (index + 1) % links.length;
     localStorage.setItem("rotatorIndex", index);
   </script>
+
+  <meta http-equiv="refresh" content="0; url=links[index]">
 </head>
 <body>
   <p>Redirecționare în curs...</p>
+
+  
 </body>
 </html>
