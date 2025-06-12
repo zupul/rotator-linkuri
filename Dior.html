@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+  <meta charset="UTF-8">
+  <title>Rotator Linkuri</title>
+  <script>
+    // Lista cu linkuri
+    const links = [
+      'https://cheddar.tv/watch?videoID=cm6xxf01w002xovkpacgyf9t5',
+'https://cheddar.tv/watch?videoID=cm6xxgrza002zovkp15q2eiyi',
+'https://cheddar.tv/watch?videoID=cm6xxoefz0037ovkp4uf7agxq',
+'https://cheddar.tv/watch?videoID=cm6xxrumk003dovkpagdo0lqd',
+'https://cheddar.tv/watch?videoID=cm6xxvyhc003hovkpejee12ym',
+'https://cheddar.tv/watch?videoID=cm5si4pto03sroov18esfew65',
+'https://cheddar.tv/watch?videoID=cm5si5fqi03szoov1hjlef3z6',
+'https://cheddar.tv/watch?videoID=cm5si5vky03t3oov14ukofjco',
+'https://cheddar.tv/watch?videoID=cm4r9tt6k000fjwkpgqmocxvt',
+'https://cheddar.tv/watch?videoID=cm4r9w3r70013jwkp2q901uu7',
+'https://cheddar.tv/watch?videoID=cm4r9z3h7001zjwkp6qck62d5',
+'https://cheddar.tv/watch?videoID=cm4ra0udg002djwkp472sa47t',
+'https://cheddar.tv/watch?videoID=cm4ra184v002hjwkp13y96mbr',
+'https://cheddar.tv/watch?videoID=cm4ra8p2w003vjwkpcos734q4',
+'https://cheddar.tv/watch?videoID=cm4raaefg004jjwkpanbr1sln',
+'https://cheddar.tv/watch?videoID=cm4raan67004ljwkp2tv6hban',
+'https://cheddar.tv/watch?videoID=cm4rahat3005vjwkpgcxlh6y0',
+'https://cheddar.tv/watch?videoID=cm4rat4hh007hjwkpegg0gl2h',
+'https://cheddar.tv/watch?videoID=cm4rav5ki007zjwkp1e4aas1p',
+'https://cheddar.tv/watch?videoID=cm4raw76q0085jwkpctwealpn',
+'https://cheddar.tv/watch?videoID=cm4raxa8s008fjwkpcxlh7g3y',
+'https://cheddar.tv/watch?videoID=cm4rb3hc8009njwkp8tha134n',
+'https://cheddar.tv/watch?videoID=cm4rb3rl3009pjwkpgj93305s',
+'https://cheddar.tv/watch?videoID=cm4rb6nc400adjwkphvz7hycv',
+'https://cheddar.tv/watch?videoID=cm4rb83iz00atjwkpg7ux7dnl',
+'https://cheddar.tv/watch?videoID=cm4rb9lrw00bdjwkpdzx8hzpr',
+'https://cheddar.tv/watch?videoID=cm4rbc00z00brjwkp51plelix',
+'https://cheddar.tv/watch?videoID=cm4rbc8zo00btjwkpep0q0nfl',
+'https://cheddar.tv/watch?videoID=cm4rbxc3s00d9jwkpfykieacf',
+'https://cheddar.tv/watch?videoID=cm4rc0mpy00dzjwkp23locci7',
+'https://cheddar.tv/watch?videoID=cm4rc1r8i00e9jwkpfa4saq43',
+'https://cheddar.tv/watch?videoID=cm4rc387x00ejjwkpc3xp6kpu',
+'https://cheddar.tv/watch?videoID=cm4rc4e4f00epjwkp53l1hd3w',
+'https://cheddar.tv/watch?videoID=cm4rcc6x600fjjwkp0wjh0caf',
+'https://cheddar.tv/watch?videoID=cm4rccdyc00fljwkpb6on6340',
+'https://cheddar.tv/watch?videoID=cm4rl8dnd000bbikp46062x99',
+'https://cheddar.tv/watch?videoID=cm4rlg9lg0017bikp4lop8sqm',
+'https://cheddar.tv/watch?videoID=cm4rlihzk001hbikpbrpa7jby',
+'https://cheddar.tv/watch?videoID=cm4rlkk2j001xbikp9yqm2mx3',
+'https://cheddar.tv/watch?videoID=cm4rlo66q002pbikpge1c65ii',
+'https://cheddar.tv/watch?videoID=cm5siec5u03u5oov160g13j42',
+'https://cheddar.tv/watch?videoID=cm5sih8p903ujoov1aqhqbkb9',
+'https://cheddar.tv/watch?videoID=cm5sipwg003vloov172wo2h1r',
+'https://cheddar.tv/watch?videoID=cm5siv12r03w5oov155exhh41',
+'https://cheddar.tv/watch?videoID=cm5siznnt03wnoov14c6t4jcq',
+'https://cheddar.tv/watch?videoID=cm5sizw2d03wpoov1d342fa8s',
+'https://cheddar.tv/watch?videoID=cm5sj1oop03wzoov1a27l81c8',
+'https://cheddar.tv/watch?videoID=cm5sjf5i003xnoov13kzh6aoj',
+'https://cheddar.tv/watch?videoID=cm5sjghgt03xroov1ec7p5qmr',
+'https://cheddar.tv/watch?videoID=cm5sjjzy703y3oov1b4hy8nk6',
+'https://cheddar.tv/watch?videoID=cm5sjk7rx03y5oov14l9i0a4c',
+'https://cheddar.tv/watch?videoID=cm5sk88p20405oov16drj34pr',
+'https://cheddar.tv/watch?videoID=cm5skbbjr040roov18uwo413x',
+'https://cheddar.tv/watch?videoID=cm5skc94p0411oov11lfe9usd',
+'https://cheddar.tv/watch?videoID=cm6xy25ur003rovkpgy2z0n2m',
+'https://cheddar.tv/watch?videoID=cm5sl7hhx0429oov1dl186auw',
+'https://cheddar.tv/watch?videoID=cm5slaxh5042joov1hkn3hojh',
+'https://cheddar.tv/watch?videoID=cm5slnu4m0443oov1cxxocpo6',
+'https://cheddar.tv/watch?videoID=cm5slv06f044voov162ac3jg8',
+'https://cheddar.tv/watch?videoID=cm5slwbte0453oov190c6ebn5',
+'https://cheddar.tv/watch?videoID=cm5slyie8045doov1fb08h7pm',
+'https://cheddar.tv/watch?videoID=cm5smfzbp046doov167ci11dk',
+'https://cheddar.tv/watch?videoID=cm5sn1gni047hoov13jbxbrjc',
+'https://cheddar.tv/watch?videoID=cm5snfixr048boov14z846xin',
+'https://cheddar.tv/watch?videoID=cm5sngu8o048joov11qolbngd',
+'https://cheddar.tv/watch?videoID=cm5sno5s5048xoov1cqla1zk4',
+'https://cheddar.tv/watch?videoID=cm5t7u7xn0009zskpfnxue0hj',
+'https://cheddar.tv/watch?videoID=cm5t7wc4h000xzskp5fxx67cl',
+'https://cheddar.tv/watch?videoID=cm5t7wgih000zzskp0zhjd8fv',
+'https://cheddar.tv/watch?videoID=cm5t7xseo001fzskp8kdedbyn',
+'https://cheddar.tv/watch?videoID=cm5t7y329001jzskp4dywand9',
+'https://cheddar.tv/watch?videoID=cm5t83fc0002dzskp8nrbgz3k',
+'https://cheddar.tv/watch?videoID=cm5t84pz3002tzskp71s4hcoc',
+'https://cheddar.tv/watch?videoID=cm5t8kp3k003lzskpdi6dg753',
+'https://cheddar.tv/watch?videoID=cm5t91hzz0047zskpggu5fkmj',
+'https://cheddar.tv/watch?videoID=cm5t9crpi005hzskpfrdjblo7',
+'https://cheddar.tv/watch?videoID=cm5t9kmfk006hzskpgdts2sp7',
+'https://cheddar.tv/watch?videoID=cm5t9lzsk006nzskpbnlqgfbh',
+'https://cheddar.tv/watch?videoID=cm5t9qtkt007xzskpfr1maico',
+'https://cheddar.tv/watch?videoID=cm5t9r4vq0081zskp41tgfgn3',
+'https://cheddar.tv/watch?videoID=cm5t9xsxd009dzskp0fva2pjo',
+'https://cheddar.tv/watch?videoID=cm6xyj1cy0041ovkpagzp5659',
+'https://cheddar.tv/watch?videoID=cm6xyltzo0043ovkp643xhxmf',
+'https://cheddar.tv/watch?videoID=cm5ta3co3009tzskp4atoe6ab',
+'https://cheddar.tv/watch?videoID=cm5ta3sbf009xzskpcgct8o23',
+'https://cheddar.tv/watch?videoID=cm5ta5idk00a3zskp9dvj5ms4',
+'https://cheddar.tv/watch?videoID=cm5ta7yb800adzskp5bo2fsgt',
+'https://cheddar.tv/watch?videoID=cm5ta8i6p00anzskpez8g95fn',
+'https://cheddar.tv/watch?videoID=cm5ta8ohn00apzskp5muv8v77',
+'https://cheddar.tv/watch?videoID=cm5taearo00bdzskpd3131mil',
+'https://cheddar.tv/watch?videoID=cm5tafwhd00bhzskpaiutemro',
+'https://cheddar.tv/watch?videoID=cm5tag0zh00bjzskp4o9n8slf',
+'https://cheddar.tv/watch?videoID=cm5tag72900blzskphjtwh7h7',
+'https://cheddar.tv/watch?videoID=cm5tax7bj00clzskp0ja00rs1',
+'https://cheddar.tv/watch?videoID=cm5tb1z6h00d5zskp0yyydkeq',
+'https://cheddar.tv/watch?videoID=cm5tb407000dfzskpg2gpejjz',
+'https://cheddar.tv/watch?videoID=cm6y0k8nc005novkp4meu4i3t',
+'https://cheddar.tv/watch?videoID=cm5tel8dl000bfxkp5tcp1br2',
+'https://cheddar.tv/watch?videoID=cm5telcxw000dfxkp2j4329p7',
+'https://cheddar.tv/watch?videoID=cm5telmod000hfxkpgt251l8u'
+    ];
+
+    // Folosim localStorage pentru a reține poziția curentă
+    let index = localStorage.getItem("rotatorIndex");
+    index = index ? parseInt(index) : 0;
+
+    // Redirecționează
+    window.location.href = links[index];
+
+    // Incrementăm indexul
+    index = (index + 1) % links.length;
+    localStorage.setItem("rotatorIndex", index);
+  </script>
+</head>
+<body>
+  <p>Redirecționare în curs...</p>
+</body>
+</html>
