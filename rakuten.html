@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+  <meta charset="UTF-8">
+  <title>Rotator Linkuri</title>
+  <script>
+    // Lista cu linkuri
+    const links = [
+      'https://cheddar.tv/watch?videoID=clzjyusnb02iw01as797x8e93',
+'https://cheddar.tv/watch?videoID=clzjyvlq402iy01as2ovcbmh5',
+'https://cheddar.tv/watch?videoID=clzjyw4jl02j001asb6yre9cm',
+'https://cheddar.tv/watch?videoID=clzjz04xc02jc01asfles85g3',
+'https://cheddar.tv/watch?videoID=clzjz0nr902je01ase5bp9mfc',
+'https://cheddar.tv/watch?videoID=clzjz1r7p02jg01asa1nuhm68',
+'https://cheddar.tv/watch?videoID=clzjz2p6m02ji01asdwi5ftw5',
+'https://cheddar.tv/watch?videoID=clzjz3vxd02jk01as95lvhgip',
+'https://cheddar.tv/watch?videoID=clzjz4g3w02jm01asft8lenx8'
+    ];
+
+    // Folosim localStorage pentru a reține poziția curentă
+    let index = localStorage.getItem("rotatorIndex");
+    index = index ? parseInt(index) : 0;
+
+    // Redirecționează
+    window.location.href = links[index];
+
+    // Incrementăm indexul
+    index = (index + 1) % links.length;
+    localStorage.setItem("rotatorIndex", index);
+  </script>
+</head>
+<body>
+  <p>Redirecționare în curs...</p>
+</body>
+</html>
