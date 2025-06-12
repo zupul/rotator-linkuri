@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+  <meta charset="UTF-8">
+  <title>Rotator Linkuri</title>
+  <script>
+    // Lista cu linkuri
+    const links = [
+      "https://cheddar.tv/watch?videoID=cm2aa25d200p2kukpbq6bc32t",
+      "https://cheddar.tv/watch?videoID=clzibyecp00gw01as3akj2woy",
+      "https://cheddar.tv/watch?videoID=cm5rqxl3c01qboov1fue89tic",
+	  "https://cheddar.tv/watch?videoID=cm5rdueu900tnoov19nxr9cmp",
+	  "https://cheddar.tv/watch?videoID=cm5ve524g001f76kph67z4xac",
+	  "https://cheddar.tv/watch?videoID=clt7ycl2w001809kp2a3r13ug",
+	  "https://cheddar.tv/watch?videoID=cm5rahn0h003voov143p81gx6",
+	  "https://cheddar.tv/watch?videoID=cm58fh4jp000v8pthe249fiys",
+	  "https://cheddar.tv/watch?videoID=cm3dkd72801uj4rkp8tpicryw",
+	  "https://cheddar.tv/watch?videoID=clg35djmf00063gv7hbxr35e2",
+	  "https://cheddar.tv/watch?videoID=cm6i7anm60003mmkp21dh4nc2",
+	  "https://cheddar.tv/watch?videoID=cm5sjsqw7000jmlkpg8wueh6w",
+	  "https://cheddar.tv/watch?videoID=cm5u2s17e00fz9lkpbdnbhg0x",
+	  "https://cheddar.tv/watch?videoID=cm4qncwqv04f5xov13witcb6m",
+	  "https://cheddar.tv/watch?videoID=cm2s6f3da001dfd2gba5953ia",
+	  "https://cheddar.tv/watch?videoID=cm59xmlvd0001wcthgie0b23f",
+	  "https://cheddar.tv/watch?videoID=cm6hr77qk00090lkp5t8410ko"
+    ];
+
+    // Folosim localStorage pentru a reține poziția curentă
+    let index = localStorage.getItem("rotatorIndex");
+    index = index ? parseInt(index) : 0;
+
+    // Redirecționează
+    window.location.href = links[index];
+
+    // Incrementăm indexul
+    index = (index + 1) % links.length;
+    localStorage.setItem("rotatorIndex", index);
+  </script>
+</head>
+<body>
+  <p>Redirecționare în curs...</p>
+</body>
+</html>
