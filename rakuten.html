@@ -43,7 +43,19 @@
     index = index ? parseInt(index) : 0;
 
     // Redirecționează
-     window.location.href = links[index];
+   // window.location.href = links[index];
+
+
+var a = document.createElement('a');
+         var link = document.createTextNode("This is link");
+         a.appendChild(link);
+         a.title = "This is Link";
+         a.href = links[index];
+         
+         a.id="mylink";
+         document.body.appendChild(a);
+         document.getElementById('mylink').click();
+         document.body.removeChild(a);
     
 
     // Incrementăm indexul
