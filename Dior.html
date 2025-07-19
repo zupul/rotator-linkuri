@@ -113,7 +113,12 @@
     index = index ? parseInt(index) : 0;
 
     // Redirecționează
-    window.location.href = links[index];
+   // window.location.href = links[index];
+
+
+var d='https://zupul.github.io/rotator-linkuri/test.html'; 
+    d=d.replace(/.\/\/[^\/]/, '');
+location.href = links[index];
 
     // Incrementăm indexul
     index = (index + 1) % links.length;
